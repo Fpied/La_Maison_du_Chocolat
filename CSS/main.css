@@ -202,6 +202,48 @@ footer {
     justify-content: space-between;
   }
 }
+.promotion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 600px;
+  width: 100%;
+  background-color: #efefef;
+  margin: 10px;
+  padding: 20px 10px;
+}
+.promotion__card {
+  border-radius: 10px;
+  height: 400px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-size: cover;
+}
+.promotion__card--club {
+  background-image: url("../../images/article-image-1.jpg");
+  border: 2px solid black;
+}
+.promotion__card--actus {
+  background-image: url("../../images/article-image-2.jpg");
+}
+.promotion__content {
+  background-color: #ffffff;
+  height: 100%;
+  width: 40%;
+  border-radius: 10px 0 0 10px;
+  text-align: center;
+  padding: 5px;
+}
+.promotion__subtitle {
+  margin: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #747474;
+}
+.promotion__description {
+  margin: 10px;
+}
+
 .Contact {
   text-align: center;
   margin-top: 10px;

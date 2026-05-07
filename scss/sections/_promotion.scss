@@ -1,2 +1,59 @@
 @use "../abstracts/variables";
 
+.promotion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+    width: 100%;
+    background-color: variables.$background-promotion;
+    margin: 10px;
+    padding: 20px 10px;
+
+
+    &__card {
+        border-radius: 10px;
+        height: 400px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        background-size: cover;
+    }
+
+    &__card--club {
+        background-image: url("../../images/article-image-1.jpg");
+        border: 2px solid black;
+
+    }
+
+    &__card--actus {
+        background-image: url("../../images/article-image-2.jpg");
+    }
+
+    &__content {
+        background-color: #ffffff;
+        height: 100%;
+        width: 40%;
+        border-radius: 10px 0 0 10px;
+        text-align: center;
+        padding: 5px;
+        
+    }
+
+    &__subtitle {
+        margin: 10px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid variables.$gray;
+
+    }
+
+    &__description{
+        margin: 10px;
+    }
+
+
+
+
+
+
+}
