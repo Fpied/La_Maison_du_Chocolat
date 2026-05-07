@@ -1,0 +1,85 @@
+@use "../abstracts/variables";
+
+.Contact{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.Contact hr{
+    margin-top: 10px;
+    width: 80%;
+    background-color: variables.$lightblue;
+    border: 1px solid variables.$lightblue;
+    margin: 0 auto; 
+}
+.Contact p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 0.6rem;
+    width: 90%;
+    justify-content: center;
+}
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.form__field{
+    margin-bottom: 20px;
+}
+.form__label {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: variables.$font-color;
+    font-family: "Roboto";
+}
+.form__input{
+    padding: 5px 10px;
+    border: 2px solid variables.$lightgray;
+
+}
+
+
+.Contact button{
+    width: 40px;
+    text-transform: uppercase;
+
+}
+
+@media (min-width: 750px){
+    .Contact{
+        margin: 10px;
+
+    }
+    .Contact h2{
+        margin-bottom: 10px;
+    }
+
+    .Contact hr{
+    margin-top: 40px;
+    width: 35%;
+    background-color: variables.$lightblue;
+    border: 1px solid variables.$lightblue;
+    margin: 0 auto; 
+
+}
+.Contact p{
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 0.5rem;
+}
+.form{
+    display: flex;
+    justify-content: space-around;
+}
+
+.Contact button{
+    height: 30px;
+    justify-content: center;
+}
+
+    
+    
+}
+

@@ -4,11 +4,17 @@
     justify-content: center;
     align-items: center;
     background-image: url("../../images/main.jpg");
-    height: 300px;
+    height: 200px;
     width: 100%;
     background-size:cover;
     background-repeat: no-repeat;
     color: #FFFFFF;
+    margin-bottom: 20px;
+}
+/* Le titre */
+.Title{
+    margin-top: 20px;
+    text-align: center;
 }
 .fitz{
     font-family: "Roboto", serif;
@@ -18,7 +24,23 @@
     font-family: "Roboto", serif;
     font-weight: 700;
 }
-button{
-    margin-top: auto;
+
+/* Le bouton */
+.button__hero{
+    margin-top: 30px;
+}
+
+@media (min-width: 750px){
+    .hero{
+        height: 400px;
+        width: 100%;
+    }
+    .fitz{
+        font-size: 2rem;
+    }
+    .bold{
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
 }
 

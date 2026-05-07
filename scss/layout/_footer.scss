@@ -1,0 +1,17 @@
+@use "../abstracts/variables";
+
+footer{
+    margin-top: 40px;
+    text-align: center;
+    height: 150px;
+    background-color: variables.$footer-color;
+}
+
+.footer__title{
+    color: #FFFFFF;
+    padding-top: 3cap;
+    padding-bottom: 20px;
+}
+.footer__text{
+    font-size: 0.8rem;
+}

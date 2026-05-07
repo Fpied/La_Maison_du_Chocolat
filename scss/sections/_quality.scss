@@ -1,0 +1,22 @@
+.quality{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+.quality img{
+    margin: 10px;
+}
+.quality h3{
+    margin-bottom: 20px;
+    font-family: "Roboto";
+}
+.quality p{
+    font-size: 0.6rem;
+    color: gray;
+}
+@media (min-width: 750px){
+    .quality{
+        display: flex;
+        justify-content: space-between;
+    }
+}

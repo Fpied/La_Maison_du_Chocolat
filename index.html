@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>La Maison du <span class="pink">Chocolat.</span></h1>
+        <h1><a href="#">La Maison du <span class="pink">Chocolat.</span> </a></h1>
         <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__item"><a class="nav__link" href="#Accueil">Accueil</a></li>
@@ -22,73 +22,72 @@
     <main>
         <section class="hero">
             <!--<img src="images/main.jpg" alt="image de truffe et de framboise">-->
-            <h2 class="fitz">Nouvelle saison</h2>
-            <h2 class="bold">Nouveaux chocolats</h2>
-            <button>Par ici</button>
+                <h2 class="hero__subtitle fitz">Nouvelle saison</h2>
+                <h2 class="hero__subtitle bold">Nouveaux chocolats</h2>
+                <button class="hero__button">Par ici</button>
         </section>
         <section class="quality">
-            <div class="qualite">
-                <img src="images/steps-icon-1.png" alt="logo qualité">
-                <h3>Qualité</h3>
-                <p>Une charte en 36 points encadre la qualité de nos chocolats et l'activité de nos boutiques.</p>
+            <div class="quality__card">
+                <img class="quality__image" src="images/steps-icon-1.png" alt="logo qualité">
+                <h3 class="quality__subtitle">Qualité</h3>
+                <p class="quality__description">Une charte en 36 points encadre la qualité de nos chocolats et l'activité de nos boutiques.</p>
             </div>
-            <div class="ecologie">
-                <img src="images/steps-icon-2.png" alt="logo écologie">
-                <h3>Ecologie</h3>
-                <p>Nous privilégions et encourageons les modes de culture, de récolte et de préparation 100% naturels.</p>
+            <div class="quality__card">
+                <img class="quality__image" src="images/steps-icon-2.png" alt="logo écologie">
+                <h3 class="quality__subtitle">Ecologie</h3>
+                <p class="quality__description">Nous privilégions et encourageons les modes de culture, de récolte et de préparation 100% naturels.</p>
             </div>
-            <div class="equitable">
-                <img src="images/steps-icon-3.png" alt="logo équitable">
-                <h3>Equitable</h3>
-                <p>La prime du commerce équitable et le prix minimum garantissant aux petits producteurs une juste rémunération.</p>
-            </div>
-        </section>
-        <section class="Promotion">
-            <div class="le__club">
-                <div class="write">
-                    <h3>Le Club</h3>
-                    <hr>
-                    <p>Inscrivez-vous dès maintenant et profitez de nos offres spéciales!</p>
-                    <button>Plus d'infos</button>
-                </div>
-                <div class="image">
-                    <img src="images/article-image-1.jpg" alt="Article image 1">
-                </div>
-            </div>
-            <div class="le__club">
-                <div class="write">
-                    <h3>Nos Actus</h3>
-                    <hr>
-                    <p>Offres spéciales, nouvelles gammes de produits, évènement...</p>
-                    <button>Plus d'infos</button>
-                </div>
-                <div class="image">
-                    <img src="images/article-image-2.jpg" alt="Article image 1">
-                </div>
+            <div class="quality__card">
+                <img class="quality__image" src="images/steps-icon-3.png" alt="logo équitable">
+                <h3 class="quality__subtitle">Equitable</h3>
+                <p class="quality__description">La prime du commerce équitable et le prix minimum garantissant aux petits producteurs une juste rémunération.</p>
             </div>
         </section>
-        <section class="Contact">
-            <h2>Contactez-nous</h2>
+        <section class="promotion">
+            <div class="promotion__cards">
+                <h2 class="promotion__cards__title">
+                    Le club
+                </h2>
+                <p class="promotion__cards__descritpion">
+                    Inscrivez-vous dès maintenant et profitez de nos offres spéciales!
+                </p>
+                <button class="promotion__button">
+                    Plus d'info
+                </button>
+            </div>
+            <div class="promotion__cards">
+                <h2 class="promotion__cards__title">
+                    Nos Actus
+                </h2>
+                <p class="promotion__cards__description">
+                    Offres spéciales, nouvelles gammes de produits, Évènements...
+                </p>
+                <button class="promotion__button">
+                    Plus d'info
+                </button>
+                
+            </div>
+        </section>
+        <section class="contact">
+            <h2 class="contact__subtitle">Contactez-nous</h2>
             <hr>
             <p>Nous sommes une entreprise de chocolaterie proposant toutes sortes de chocolats mais aussi des cours pour vous permettre de préparer vous-même vos chocolats.</p>
-            <form action="">
-                <ul>
-                    <li>
-                        <label for="name">Nom</label>
-                        <input type="text" id="name" name="username">
-                    </li>
-                    <li>
-                        <label for="mail">Email</label>
-                        <input type="email" id="mail" name="user_mail">
-                    </li>
-                </ul>
+            <form action="#" method="post" class="form">
+                <div class="form__field">
+                    <label class="form__label" for="nom">Nom</label>
+                    <input class="form__input" type="text" id="name" name="nom" required placeholder="Votre nom">
+                </div>
+                <div class="form__field">
+                    <label class="form__label" for="mail">Email</label>
+                    <input class="form__input" type="email" id="email" name="email" required placeholder="Votre email">
+                </div>
                 <button>ok</button>
             </form>
         </section>
     </main>
-    <footer>
-        <h2>La Maison du <span class="pink">Chocolat.</span></h2>
-        <p>Copyright &copy; Touts droits réservés.</p>
+    <footer>        
+        <h2 class="footer__title">La Maison du <span class="pink">Chocolat.</span></h2>
+        <p class="footer__text">Copyright &copy; Touts droits réservés.</p>
     </footer>
     
 </body>

@@ -4,6 +4,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+}
+p{
+    color: variables.$font-color;
+    font-family: "Roboto";
+}
+
+a { 
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
 }
 /* Font */
 @font-face{
