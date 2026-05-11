@@ -1,17 +1,42 @@
-@use "../abstracts/variables";
-
-footer{
-    margin-top: 40px;
+@use "../abstracts/variables" as *;
+/* =================================================================================== */
+/* BLOCK :  FOOTER                                                                     */
+/* =================================================================================== */
+.footer{
+    background-color: $footer-color;
     text-align: center;
-    height: 150px;
-    background-color: variables.$footer-color;
+    color: $white;
+    &__title{
+        padding-top: 10px;
+        font-size: 1.5rem;
+        margin-bottom: 10px; 
+    }
+    &__copyright{
+            padding-bottom: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: $font-color;
+        }
 }
 
-.footer__title{
-    color: #FFFFFF;
-    padding-top: 3cap;
-    padding-bottom: 20px;
-}
-.footer__text{
-    font-size: 0.8rem;
+
+@media(min-width:750px){
+    .footer{
+    background-color: $footer-color;
+    text-align: center;
+    padding-top: 25px;
+    color: $white;
+        &__title{
+            padding-top: 10px;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+        }
+        &__copyright{
+            padding-bottom: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: $font-color;
+            padding-bottom: 25px;
+        }
+    }
 }

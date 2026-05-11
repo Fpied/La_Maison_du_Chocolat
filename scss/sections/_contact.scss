@@ -1,85 +1,106 @@
-@use "../abstracts/variables";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
-.Contact{
+/* =================================================================================== */
+/* BLOCK :  CONTACT                                                                    */
+/* =================================================================================== */
+.contact{
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    &__title{
+        text-transform: uppercase;
+        color: $footer-color;
+        width: 80%;
+        margin: 0 auto;
+        ::after{
+            content: "";
+            display: block;
+            margin: 0 auto;
+            border-bottom: 2px solid $lightblue;
+            padding-bottom: 5px;
+        }
+    }
+    &__description{
+        margin: 10px 5px;
+        font-size: 0.5rem;
+
+    }
 }
-.Contact hr{
-    margin-top: 10px;
-    width: 80%;
-    background-color: variables.$lightblue;
-    border: 1px solid variables.$lightblue;
-    margin: 0 auto; 
-}
-.Contact p{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    font-size: 0.6rem;
-    width: 90%;
-    justify-content: center;
-}
-.form {
+/* =================================================================================== */
+/* BLOCK :  DEBUT DU FORMULAIRE                                                        */
+/* =================================================================================== */
+.form{
     max-width: 600px;
     margin: 0 auto;
-}
-.form__field{
-    margin-bottom: 20px;
-}
-.form__label {
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    color: variables.$font-color;
-    font-family: "Roboto";
-}
-.form__input{
-    padding: 5px 10px;
-    border: 2px solid variables.$lightgray;
 
-}
-
-
-.Contact button{
-    width: 40px;
-    text-transform: uppercase;
-
-}
-
-@media (min-width: 750px){
-    .Contact{
-        margin: 10px;
+    &__field{
+        margin-bottom: 15px;
+    }
+    &__label{
+        margin-right: 5px;
+        color: $gray;
+        font-weight: bolder;
+    }
+    &__input{
+        padding: 5px;
+        border: 2px solid $lightgray;
 
     }
-    .Contact h2{
-        margin-bottom: 10px;
+    &__button{
+        @include button;
+        margin-bottom: 20px;
+
     }
 
-    .Contact hr{
-    margin-top: 40px;
-    width: 35%;
-    background-color: variables.$lightblue;
-    border: 1px solid variables.$lightblue;
-    margin: 0 auto; 
-
 }
-.Contact p{
-    padding: 20px;
-    width: 80%;
+
+/* Fin du formulaire */
+@media(min-width:750px){
+    .contact{
+    text-align: center;
+        &__title{
+            text-transform: uppercase;
+            color: $footer-color;
+            width: 30%;
+            margin: 0 auto;
+            padding-top: 20px;
+            ::after{
+                content: "";
+                display: block;
+                margin: 0 auto;
+                border-bottom: 2px solid $lightblue;
+                padding-bottom: 5px;
+            }
+        }
+        &__description{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin: 0 auto;
+            font-size: 0.9rem;
+            width: 95%;
+        }
+    }
+    /* Début du formulaire */
+    .form{
     margin: 0 auto;
-    font-size: 0.5rem;
-}
-.form{
-    display: flex;
-    justify-content: space-around;
-}
+        &__field{
+            margin-bottom: 15px;
+            display: inline-block;
+            margin-right: 20px;
+        }
+        &__label{
+            margin-right: 5px;
+            color: $gray;
+            font-weight: bolder;
+        }
+        &__input{
+            padding: 5px;
+            border: 2px solid $lightgray;
+        }
+        &__button{
+            margin-bottom: 70px;
+        }
 
-.Contact button{
-    height: 30px;
-    justify-content: center;
-}
+    }
+      /* Fin du formulaire */
 
-    
-    
 }
-

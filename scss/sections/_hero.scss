@@ -1,46 +1,66 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 .hero{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 220px;
+    background-image: url("../../images/main.jpg");
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background-image: url("../../images/main.jpg");
-    height: 200px;
-    width: 100%;
-    background-size:cover;
-    background-repeat: no-repeat;
-    color: #FFFFFF;
-    margin-bottom: 20px;
-}
-/* Le titre */
-.Title{
-    margin-top: 20px;
-    text-align: center;
-}
-.fitz{
-    font-family: "Roboto", serif;
-    font-weight: 400;
-}
-.bold{
-    font-family: "Roboto", serif;
-    font-weight: 700;
+    position: relative;
+    &__title{
+        text-align: center;
+        padding-top: 30px;
+        color: $white;
+        font-size: 1rem;
+        line-height: 1;
+
+    }
+    &__title h2{
+        font-weight: 300;
+        margin-top: 10px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+
+    }
+    &__bold{
+        font-weight: bold;
+        display: block;
+
+    }
+    &__button{
+        @include button;
+
+    }
+    
 }
 
-/* Le bouton */
-.button__hero{
-    margin-top: 30px;
-}
-
-@media (min-width: 750px){
+@media(min-width:750px){
     .hero{
         height: 400px;
         width: 100%;
+        gap: 10px;
+        justify-content: flex-start;
+        padding-top: 50px;
+        align-items: center;
+        &__title{
+            font-size: 2rem;
+            margin-bottom: 0;
+            margin-top: 0;
+            padding-top: 0;
+        }
+        &__button{
+            @include button;
+            position: static;
+        transform: none;
+        width: auto;
+        justify-content: start;
+        width: 10%;
+        margin-top: 40px;
+        }
     }
-    .fitz{
-        font-size: 2rem;
-    }
-    .bold{
-        font-size: 2rem;
-        margin-bottom: 15px;
-    }
+  
 }
-

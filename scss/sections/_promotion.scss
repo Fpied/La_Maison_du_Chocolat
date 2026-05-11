@@ -1,59 +1,101 @@
-@use "../abstracts/variables";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
-.promotion {
+/* =================================================================================== */
+/* BLOCK :  PROMOTION                                                                  */
+/* =================================================================================== */
+.promotion{
+    height: 480px;
+    width: 100%;
+    background-color: $background-promotion;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 600px;
-    width: 100%;
-    background-color: variables.$background-promotion;
-    margin: 10px;
-    padding: 20px 10px;
-
-
-    &__card {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    &__cards{
+        display: flex;
+        height: 210px;
+        width: 90%;
+        border: 1px solid $lightgray;
         border-radius: 10px;
-        height: 400px;
-        margin-bottom: 10px;
-        margin-right: 10px;
-        background-size: cover;
-    }
-
-    &__card--club {
-        background-image: url("../../images/article-image-1.jpg");
-        border: 2px solid black;
+        margin: 4px;
 
     }
-
-    &__card--actus {
-        background-image: url("../../images/article-image-2.jpg");
-    }
-
-    &__content {
-        background-color: #ffffff;
+    &__info{
+        background-color: $white;
         height: 100%;
-        width: 40%;
-        border-radius: 10px 0 0 10px;
+        width: 50%;
         text-align: center;
-        padding: 5px;
-        
+        border-radius: 10px 0 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding-bottom: 10px;
     }
-
-    &__subtitle {
-        margin: 10px;
-        padding-bottom: 20px;
-        margin-bottom: 20px;
-        border-bottom: 1px solid variables.$gray;
+    &__subtitle{
+        padding-top: 20px;
+        color: $footer-color;
+        font-weight: 700;
+        text-transform: uppercase;
+        &::after{
+            content: "";
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+            border-bottom: 1px solid $lightgray;
+        }
 
     }
-
     &__description{
-        margin: 10px;
+        margin: 5px 2px;
+        line-height: 1.5;
+        font-size: 0.8rem;
+        font-style: italic;
+        color: $gray;
     }
+    &__button{
+        @include button;
+
+    }
+}
+    
+.image__one{
+    background-image: url("../../images/article-image-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.image__tow{
+    background-image: url("../../images/article-image-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 
+@media(min-width:750px){
 
-
-
-
+    /* =================================================================================== */
+    /* BLOCK :  PROMOTION                                                                  */
+    /* =================================================================================== */
+    .promotion{
+    height: 300px;
+    width: 100%;
+    background-color: $background-promotion;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding-top: 30px;
+        &__cards{
+            height: 210px;
+            width: 375px;
+            border: 1px solid $lightgray;
+            border-radius: 10px;
+            margin: 10px;
+        }
+    }
 }

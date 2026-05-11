@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Crete_Round";
+    src: url("../../font/Crete_Round/CreteRound-Regular.ttf");
+}
+@font-face{
+    font-family: "CreteRound-Italic";
+    src: url("../../font/Crete_Round/CreteRound-Italic.ttf");
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("../../font/Roboto/Roboto-VariableFont.ttf");
+}
+@font-face {
+    font-family: "Roboto_italic";
+    src: url("../../font/Roboto/Roboto-Italic-VariableFont_wdth\,wght.ttf");
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    /* Couleur de font */
+    color: var(--font-color);
+    line-height: 1.7;
+}

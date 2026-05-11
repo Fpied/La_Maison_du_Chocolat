@@ -1,54 +1,64 @@
-@use '../components/base';
-@use '../abstracts/variables';
-/* Première partie de ma page */
-header{
-    background-color: #FFFFFF;
-    text-align: center;
-    width: 100%;
-}
-/* Le titre de ma page */
-h1{
-    margin-top: 20px;
-    font-family: "Roboto";
-    font-size: 1.4rem;
-}
-/* bloc nav */
-.nav__list{
-    list-style: none; /* Supprime les puces/numéros de la liste <ul>/<ol> */
-    text-align: left;
-    margin-top: 10px;
-    margin-left: 20px;
-    padding-left: 0;
-}
-.nav__item{
-    margin: 0;
-    display: inline-block;
+@use "../abstracts/variables" as *;
 
+.header{
+    text-align: center;
+    padding-top: 10px;
 }
-.nav__link{
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0px;
+
+a{
     text-decoration: none;
-    color: variables.$footer-color;
-    font-family: "Roboto";
-    font-weight: 700;
-    font-size: 0.8rem;
-    white-space: nowrap;
 }
+.nav__header{
+    color: $footer-color;
+    font-family: "Crete_Round";
+    font-size: 1.8rem;
+    white-space: nowrap;
+    
+}
+
+.pink{
+    color: $framboise;
+}
+/* =================================================================================== */
+/* BLOCK : Menu                                                                        */
+/* =================================================================================== */
+.nav__list{
+    display: flex;
+    
+    justify-content: space-around;
+    list-style: none;
+    text-align: center;
+    margin-top: 20px;
+    &__item{
+        margin: 0 2px;
+    }
+    &__link{
+        display: inline-block;
+    color: $footer-color;
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+
+    }
+}
+
+
 @media (min-width: 750px){
-    header{
+    /* =================================================================================== */
+    /* BLOCK : header                                                                      */
+    /* =================================================================================== */
+    /* =================================================================================== */
+    /* BLOCK : Title                                                                       */
+    /* =================================================================================== */
+    .header{
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
-        margin-bottom: 20px;
-        
-        
+        align-items: center;
+        padding: 0 20px;
+
     }
-    .nav{
-        margin-top: 20px;
-        font-size: 1rem;
-    }
-    .nav li{
-        margin-left: 15px;
+    .nav__list{
+        gap: 20px;
     }
 }
