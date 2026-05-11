@@ -2,9 +2,10 @@
 
 @mixin button{
     background-color: $framboise;
-    padding: 10px;
-    border-radius: 3px;
+    padding: 10px 22px;
+    border-radius: 4px;
     color: $white;
     border: none;
+    cursor: pointer;
 
 }

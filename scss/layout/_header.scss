@@ -3,62 +3,69 @@
 .header{
     text-align: center;
     padding-top: 10px;
-}
-
-a{
-    text-decoration: none;
-}
-.nav__header{
     color: $footer-color;
-    font-family: "Crete_Round";
-    font-size: 1.8rem;
-    white-space: nowrap;
-    
-}
-
-.pink{
-    color: $framboise;
-}
-/* =================================================================================== */
-/* BLOCK : Menu                                                                        */
-/* =================================================================================== */
-.nav__list{
-    display: flex;
-    
-    justify-content: space-around;
-    list-style: none;
-    text-align: center;
-    margin-top: 20px;
-    &__item{
-        margin: 0 2px;
-    }
-    &__link{
-        display: inline-block;
-    color: $footer-color;
-    font-weight: 700;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-
-    }
-}
-
-
-@media (min-width: 750px){
-    /* =================================================================================== */
-    /* BLOCK : header                                                                      */
-    /* =================================================================================== */
-    /* =================================================================================== */
-    /* BLOCK : Title                                                                       */
-    /* =================================================================================== */
-    .header{
+    margin-bottom: 10px;
+    @media(min-width: $desktop){
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+        justify-content: center;
+        gap: 80px;
+        align-items: flex-end;
         padding: 0 20px;
 
     }
-    .nav__list{
-        gap: 20px;
+
+
+
+     &__nav{
+        color: $footer-color;
+        font-family: "Crete_Round";
+        font-size: 1.8rem;
+        white-space: nowrap;
+
+    }
+
+  
+    
+    &__link-title{
+        color: $footer-color;
+        text-decoration: none;
+        white-space: nowrap;
+        font-size: 2rem;
+        font-family: "Crete_Round";
+    }
+
+    &__nav-link{
+        text-decoration: none;
+        display: inline-block;
+        color: $footer-color;
+        font-weight: 700;
+        font-size: 0.6rem;
+        text-transform: uppercase;
+        @media(min-width: $desktop){
+            font-size: 0.9rem;
+        }
+
+    }
+   
+    &__nav-list{
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        text-align: center;
+        @media($desktop){
+            gap: 10px;
+            margin-bottom: 0;
+
+        }
+    }
+    &__nav-item{
+        margin: 0 2px;
     }
 }
+
+
+
+/* =================================================================================== */
+/* BLOCK : Menu                                                                        */
+/* =================================================================================== */    

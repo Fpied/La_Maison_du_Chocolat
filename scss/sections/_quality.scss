@@ -1,42 +1,39 @@
 @use "../abstracts/variables" as *;
+@use "../base/base" as *;
 /* =================================================================================== */
 /* BLOCK : QUALITY                                                                     */
 /* =================================================================================== */
 .quality{
     text-align: center;
     margin-top: 25px;
+    margin-bottom: 25px;
     display: flex;
     flex-direction: column;
+    @media(min-width: $desktop){
+        flex-direction: row;
+        justify-content: center;
+        &__cards{
+            margin: 15px;
+            width: 30%;
+        }
+
+    }
     &__title{
         text-transform: uppercase;
         color: $footer-color;
     }
     &__description{
         margin: 0 10px 20px 10px;
-        font-size: 0.5rem;
-
-    }
-}
-
-@media(min-width:750px){
-    /* =================================================================================== */
-    /* BLOCK : QUALITY                                                                     */
-    /* =================================================================================== */
-    .quality{
-    text-align: center;
-    margin-top: 25px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-        &__cards{
-            margin: 15px;
-            width: 30%;
-        }
-        &__description{
+        font-size: 1rem;
+        color: $font-color;
+        @media(min-width: $desktop){
             margin: 10px 2px 20px 2px;
-    font-size: 0.9rem;
-
+            font-size: 1rem;
         }
-    }
 
+    }
+    &__image{
+        height: 60px;
+        width: 60px;
+    }
 }

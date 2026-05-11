@@ -1,42 +1,59 @@
 @use "../abstracts/variables" as *;
-/* =================================================================================== */
-/* BLOCK :  FOOTER                                                                     */
-/* =================================================================================== */
-.footer{
+
+
+.footer {
     background-color: $footer-color;
     text-align: center;
     color: $white;
-    &__title{
-        padding-top: 10px;
-        font-size: 1.5rem;
-        margin-bottom: 10px; 
-    }
-    &__copyright{
-            padding-bottom: 20px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: $font-color;
-        }
-}
+
+    @media(min-width:750px) {
+
+        background-color: $footer-color;
+        text-align: center;
+        padding-top: 25px;
+        color: $white;
 
 
-@media(min-width:750px){
-    .footer{
-    background-color: $footer-color;
-    text-align: center;
-    padding-top: 25px;
-    color: $white;
-        &__title{
-            padding-top: 10px;
-            font-size: 1.5rem;
-            margin-bottom: 25px;
-        }
-        &__copyright{
+
+        &__copyright {
             padding-bottom: 20px;
             font-size: 0.9rem;
             font-weight: 700;
             color: $font-color;
             padding-bottom: 25px;
+
+            @media(min-width: 768px) {
+                padding-bottom: 20px;
+                font-size: 0.9rem;
+                font-weight: 700;
+                color: $font-color;
+                padding-bottom: 25px;
+            }
         }
+
+    }
+
+    &__title {
+        padding-top: 10px;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+
+        @media(min-width: 768px) {
+            padding-top: 10px;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__title-link {
+        text-decoration: none;
+        color: $white;
+    }
+
+    &__copyright {
+        padding-bottom: 20px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: $font-color;
     }
 }

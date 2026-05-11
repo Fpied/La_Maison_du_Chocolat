@@ -4,7 +4,7 @@
 /* =================================================================================== */
 /* BLOCK :  PROMOTION                                                                  */
 /* =================================================================================== */
-.promotion{
+.promotion {
     height: 480px;
     width: 100%;
     background-color: $background-promotion;
@@ -13,16 +13,32 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
-    &__cards{
+    @media(min-width: $desktop){
+        height: 300px;
+        flex-direction: row;
+        align-items: flex-start;
+        padding-top: 30px;
+    }
+
+    &__cards {
         display: flex;
-        height: 210px;
+        height: 230px;
         width: 90%;
         border: 1px solid $lightgray;
         border-radius: 10px;
-        margin: 4px;
+        margin: 10px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+        @media(min-width: $desktop){
+            height: 210px;
+            width: 375px;
+        }
 
     }
-    &__info{
+
+    &__info {
         background-color: $white;
         height: 100%;
         width: 50%;
@@ -30,16 +46,19 @@
         border-radius: 10px 0 0 10px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        gap: 10px;
+        justify-content: flex-start;
+        gap: 5px;
         padding-bottom: 10px;
     }
-    &__subtitle{
+
+    &__subtitle {
         padding-top: 20px;
         color: $footer-color;
         font-weight: 700;
         text-transform: uppercase;
-        &::after{
+        margin-bottom: 5px;
+
+        &::after {
             content: "";
             display: block;
             width: 80%;
@@ -48,54 +67,33 @@
         }
 
     }
-    &__description{
+
+    &__description {
         margin: 5px 2px;
         line-height: 1.5;
         font-size: 0.8rem;
         font-style: italic;
         color: $gray;
-    }
-    &__button{
-        @include button;
 
-    }
-}
-    
-.image__one{
-    background-image: url("../../images/article-image-1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.image__tow{
-    background-image: url("../../images/article-image-2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-
-@media(min-width:750px){
-
-    /* =================================================================================== */
-    /* BLOCK :  PROMOTION                                                                  */
-    /* =================================================================================== */
-    .promotion{
-    height: 300px;
-    width: 100%;
-    background-color: $background-promotion;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    margin-bottom: 10px;
-    padding-top: 30px;
-        &__cards{
-            height: 210px;
-            width: 375px;
-            border: 1px solid $lightgray;
-            border-radius: 10px;
-            margin: 10px;
+        p{
+            margin: 0;
         }
+    }
+
+    &__button {
+        @include button;
+        margin: 0 auto;
+        width: 120px;
+        margin-bottom: 20px;
+
+    }
+
+    &__cards--club {
+        background-image: url("../../images/article-image-1.jpg");
+
+    }
+
+    &__cards--actu {
+        background-image: url("../../images/article-image-2.jpg");
     }
 }
